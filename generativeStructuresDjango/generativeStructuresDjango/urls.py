@@ -36,7 +36,6 @@ def auto_login(request):
         return redirect('/admin/login')
 
 urlpatterns = [
-    # path('admin/', admin.site.urls),
     url(r'^admin/', admin.site.urls),
     url(r'^$', RedirectView.as_view(url='/login')),
     url(r'^login/', login, name='login'),
